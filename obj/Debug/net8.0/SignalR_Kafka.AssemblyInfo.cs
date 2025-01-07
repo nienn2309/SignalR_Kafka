@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SignalR_Kafka")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b5788d531e8e50f4cc3f197069bf01f7ce17451")]
 [assembly: System.Reflection.AssemblyProductAttribute("SignalR_Kafka")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SignalR_Kafka")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
