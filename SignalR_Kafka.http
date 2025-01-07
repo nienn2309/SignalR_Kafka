@@ -1,0 +1,6 @@
+@SignalR_Kafka_HostAddress = http://localhost:5277
+
+GET {{SignalR_Kafka_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "sM7WB9GvhIdHjzIIkCiN0OOZCyn/M0/xNxa0Nj5vfGc=",
+  "Source": "SignalR_Kafka",
+  "BasePath": "_content/SignalR_Kafka",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
