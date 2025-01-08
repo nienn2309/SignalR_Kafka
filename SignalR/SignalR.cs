@@ -9,12 +9,13 @@ namespace SignalR_Kafka.SignalR
         public async Task SendMessageToGroup(string conversationId, string user, string message)
         {
             var currentTime = DateTime.UtcNow;
-            await Clients.Group(conversationId).SendAsync("ReceiveMessage", message, conversationId);
+            await Clients.Group(conversationId).SendAsync("ReceiveMessage", user, message, conversationId);
             await Clients.All.SendAsync("ConversationTimeUpdated", conversationId, currentTime);
         }
 
         public async Task JoinGroup(string conversationId)
         {
+            Console.WriteLine($"{Context.ConnectionId}");
             await Groups.AddToGroupAsync(Context.ConnectionId, conversationId);
             Console.WriteLine($"User {Context.ConnectionId} joined group {conversationId}");
         }
@@ -38,7 +39,14 @@ namespace SignalR_Kafka.SignalR
 
         public override Task OnDisconnectedAsync(Exception? exception)
         {
-            Console.WriteLine($"User disconnected: {Context.ConnectionId}");
+            if (exception != null)
+            {
+                Console.WriteLine($"User disconnected with error: {exception.Message}");
+            }
+            else
+            {
+                Console.WriteLine("User disconnected");
+            }
             return base.OnDisconnectedAsync(exception);
         }
     }
